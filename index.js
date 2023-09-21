@@ -5,16 +5,25 @@ class Calculadora {
     this.resultado = 0;
   }
 
-  // Função para somar dois números
+  // Função para somar dois números e verificar se o resultado é positivo ou negativo
   somar(numero1, numero2) {
     this.resultado = numero1 + numero2;
-    return this.resultado;
+    if (this.resultado >= 0) {
+      return `A soma é positiva: ${this.resultado}`;
+    } else {
+      return `A soma é negativa: ${this.resultado}`;
+    }
   }
 
-  // Função para subtrair dois números
+  // Função para subtrair dois números e verificar se o resultado é maior ou menor que 10
   subtrair(numero1, numero2) {
     this.resultado = numero1 - numero2;
-    return this.resultado;
+    if (this.resultado > 10) {
+      return `A subtração é maior que 10: ${this.resultado}`;
+    } else {
+      //Modificado
+      return `A subtração é menor ou igual a 10: ${this.resultado}`;
+    }
   }
 
   // Função para multiplicar dois números
@@ -40,8 +49,8 @@ class Calculadora {
 // Exemplo de uso da classe Calculadora
 const minhaCalculadora = new Calculadora();
 
-console.log(minhaCalculadora.somar(5, 3)); // Resultado: 8
-console.log(minhaCalculadora.subtrair(10, 4)); // Resultado: 6
+console.log(minhaCalculadora.somar(5, 3)); // Resultado: A soma é positiva: 8
+console.log(minhaCalculadora.subtrair(20, 4)); // Resultado: A subtração é maior que 10: 16
 console.log(minhaCalculadora.multiplicar(2, 6)); // Resultado: 12
 console.log(minhaCalculadora.dividir(8, 2)); // Resultado: 4
 console.log(minhaCalculadora.dividir(6, 0)); // Resultado: Erro: Divisão por zero!
