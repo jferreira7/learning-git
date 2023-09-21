@@ -21,6 +21,7 @@ class Calculadora {
     if (this.resultado > 10) {
       return `A subtração é maior que 10: ${this.resultado}`;
     } else {
+      //Modificado
       return `A subtração é menor ou igual a 10: ${this.resultado}`;
     }
   }
