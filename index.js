@@ -40,6 +40,10 @@ class Calculadora {
     this.resultado = numero1 / numero2;
     return this.resultado;
   }
+
+  potencia() {
+    console.log("ponteciação");
+  }
 }
 
 // Exemplo de uso da classe Calculadora
